@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday Akshita ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin-top: 15%;
+            font-size: 3em;
+            animation: glow 2s infinite alternate;
+        }
+
+        p {
+            font-size: 1.3em;
+            width: 70%;
+            margin: auto;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            background: #ff4b2b;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff416c;
+            transform: scale(1.1);
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #ff4b2b; }
+            to { text-shadow: 0 0 30px #ff416c; }
+        }
+
+        .heart {
+            position: absolute;
+            color: red;
+            animation: float 6s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh); opacity: 1; }
+            100% { transform: translateY(-10vh); opacity: 0; }
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Happy Birthday Akshita ❤️</h1>
+
+<p>
+I know you are angry with me...  
+But a CSE student expresses love differently 😌  
+Others give gifts… I write code for you 💻❤️  
+
+You are the most beautiful part of my life’s program.  
+And I never want to debug you away.
+</p>
+
+<button onclick="showMessage()">Click If You Still Love Akash 😌</button>
+
+<script>
+function showMessage() {
+    alert("No matter how far Kolkata and Odisha are...\nMy heart always runs towards you ❤️\n\nWill you forgive me?");
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 20 + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+}
+
+setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
